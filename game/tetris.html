@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="utf-8"/>
+        <script src="../build/main-bundle.js"></script>
+        <link rel="stylesheet" href="./tetris.css">
+    </head>
+    <body>
+        <h1>Tetris</h1>
+        <br>
+        <svg id="backdrop" width="600" height="1400" viewBox="0 0 600 1400">
+            <!-- The game play area is 600 x 1200, with a 600 x 200 UI area at the top. -->
+            <text id="score" x="20" y="60" fill="rgb(255,255,255)" font-size="48">Score: 0</text>
+            <text id="level" x="400" y="60" fill="rgb(255,255,255)" font-size="48">Level: 1</text>
+            <text id="notification" x="130" y="400" fill="rgb(255,255,255)" font-size="64"></text>
+            <line id="text-divider" x1="0" x2="600" y1="100" y2="100" stroke="rgb(255,255,255)" stroke-width="2"/>
+            <line id="divider" x1="0" x2="600" y1="200" y2="200" stroke="rgb(255,255,255)" stroke-width="2"/>
+        </svg>
+        <br>
+        <h1>Controls</h1>
+        <br>
+        <h1><pre>  A | D : Move piece  </pre></h1>
+        <h1><pre>  Q | E : Rotate piece</pre></h1>
+        <h1><pre>    S   : Drop piece  </pre></h1>
+        <h1><pre>    P   : Pause game  </pre></h1>
+        <br>
+        <br>
+        <h2><pre>
+            Tetris : Multi-paradigm Approach
+            Functional-Reactive Programming / Object-Oriented Programming.
+        
+            ...Why functional?
+
+        Functional code can be concise and simple, but also powerful.
+        Object-oriented programming seeks to minimise dependencies between different parts of
+        a program by information hiding, and models the program as a series of interacting
+        objects which fulfill distinct roles. Functional programming attempts to address a
+        similar problem, but does so by minimsing (ideally, eliminating) the mutability of state
+        across the program. There is then no need to "hide" things, because they cannot be
+        modified in a way which would break existing functions. Reactive programming then manages
+        asynchronous behaviour, where functions are "subscribed" or listen to events in
+        time. Predominantly, observable streams are used here - if you think of an array as a
+        "pull" data structure, where you request data from it, then a stream is a "push" data
+        structure, which provides data as it becomes available.
+    
+        In this program, these three paradigms are interleaved; we make use of interfaces to
+        deeply-immutable objects, which are emmitted through observable streams.
+    
+            * Features *
+            The game features:
+                * pseudo-random ordering of tetrominoes;
+                * scoring, with higher scores afforded when more lines are cleared at once,
+                  or at higher levels;
+                * leveling, with appropriate difficulty scaling which includes faster falling
+                  pieces which lock-in sooner;
+                * pausing, and;
+                * piece preview.
+        </pre></h2>
+    </body>
+</html>
