@@ -1,3 +1,4 @@
 node_modules/
 game/debug.log
 debug.log
+src/tetris.js
