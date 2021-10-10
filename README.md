@@ -4,7 +4,7 @@ tetris.html.
 
 # Tetris : Multi-paradigm Approach
 ## Functional-Reactive Programming / Object-Oriented Programming.
-The core part of the Tetris game. In this file, effectful code is minimised - it intentionally
+In the core part of the Tetris game, effectful code is minimised - it intentionally
 exists in a pair of places: the "subscribe" call for the game$ stream, and the initial value for
 scan on that same stream (where we choose a seed for pseudo-random number generation). Of course,
 the creation and performance of the streams themselves are effects, too.
